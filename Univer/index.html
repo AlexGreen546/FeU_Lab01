@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li style="list-style-type: none;"><a href="index.html">Work 1</a></li>
+                <li style="list-style-type: none;"><a href="work2.html">Work 2</a></li>
+                <li style="list-style-type: none;"><a href="work3.html">Work 3</a></li>
+                <li style="list-style-type: none;"><a href="work4.html">Work 4</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <fieldset class="wraper">
+        <legend>Register form</legend>
+        <form action="/action_page.php" method="get" autocomplete="on">
+            First name: <input type="text" name="fname" placeholder="First name" required autofocus><br>
+            Last name: <input type="text" name="lname" placeholder="Last name" required><br>
+            Gender: <select name="age" id="#">
+                <option value="none">-</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select><br>
+            Birthday: <input type="date" name="age" id="#" required><br>
+            E-mail: <input type="email" name="email" id="#" autocomplete="off" required><br>
+            Telephone: <input type="tel" name="tel" id="#"><br>
+            Choose background: <input type="color"  id="bgcolor" list=""> 
+
+            <!-- Скрипт изменения цвета фона -->
+            <script>
+                var colorPicker = document.getElementById("bgcolor");
+
+                function changebodycolor() {
+                    var colorVal = colorPicker.value;
+                    document.body.style.background = colorVal;
+                }
+                colorPicker.addEventListener("change",changebodycolor, false);
+
+            </script> <br>
+            <!-- Скрипт изменения цвета фона -->
+
+            Country: <select name="country" id="#">
+                <option value="country">Ukraine</option>
+            </select> <br>
+            City: <select name="city" id="">
+                <option value="">Kyiv</option>
+                <option value="">Kharkiv</option>
+                <option value="">Odesa</option>
+                <option value="">Dnipro</option>
+                <option value="">Donetsk</option>
+                <option value="">Lviv</option>
+                <option value="">Zaporizhzhia</option>
+                <option value="">Mykolaiv</option>
+                <option value="">Mariupol</option>
+                <option value="">Vinnitsia</option>
+            </select> <br>
+            Coment: <br><textarea name="coment" id="#" cols="30" rows="10"></textarea> <br>
+            <input type="submit" value="Submit"><input type="reset" value="Clear">
+        </form>
+    </fieldset>
+</body>
+</html>
